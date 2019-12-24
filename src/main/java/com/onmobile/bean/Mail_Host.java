@@ -7,12 +7,12 @@ import javax.mail.internet.*;
 
 public class Mail_Host {
 
-	public static void main(String args[]) {
+	public void sendMail() {
 	
 		
 		String host="mail.onmobile.com";
 		final String user = "doddi.arun@onmobile.com";
-		final String password = "Your Password";
+		final String password = "Lastliving@34";
 				
 		String to = "doddi.arun@onmobile.com";
 		
@@ -34,12 +34,64 @@ public class Mail_Host {
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 			message.setSubject("Demo mail");
 			//message.setText("hi arun");
-			message.setContent("<!DOCTYPE html><html><head><style>table {font-family: arial, sans-serif;border-collapse: collapse;width: 100%;}td, th {border: 1px solid #dddddd;text-align:left;\r\n" + 
-					"padding: 8px;}tr:nth-child(even) {  background-color: #dddddd;}</style></head><body><h2>HTML Table</h2><table><tr><th>Company</th><th>Contact</th><th>Country</th></tr><tr><td>Alfreds Futterkiste</td><td>Maria Anders</td><td>Germany</td></tr><tr><td>Centro comercial Moctezuma</td><td>Francisco Chang</td><td>Mexico</td></tr><tr><td>Ernst Handel</td><td>Roland Mendel</td><td>Austria</td></tr><tr><td>Island Trading</td><td>Helen Bennett</td><td>UK</td></tr><tr><td>Laughing Bacchus Winecellars</td><td>Yoshi Tannamuri</td><td>Canada</td></tr></table></body></html>", "text/html; charset=utf-8");
+			message.setContent("<table>\r\n" + 
+					"  <tr style=\"border: 1px solid black;width:5cm;background-color:  #ff4000;text-align: center;\">\r\n" + 
+					"    <td colspan=\"2\"style=\"border: 1px solid black;border-collapse: collapse; height:20px;width:5cm\"></td>\r\n" + 
+					"  </tr>\r\n" + 
+					"  <tr style=\"border: 1px solid black;width:9cm;background-color:#ff8000;text-align: center;\">\r\n" + 
+					"    <th style=\"border: 1px solid black;border-collapse: collapse;width:6cm\">Information</th><th style=\"border: 1px solid black;border-collapse: collapse;width:9cm\">Details</th>\r\n" + 
+					"  </tr>\r\n" + 
+					"  <tr style=\"border: 1px solid black;width:9cm;text-align: center;\">\r\n" + 
+					"    <td style=\"border: 1px solid black;border-collapse: collapse;width:6cm\">Issue Discription</td><td style=\"border: 1px solid black;border-collapse: collapse;width:9cm\"></td>\r\n" + 
+					"  </tr>\r\n" + 
+					"  <tr style=\"border: 1px solid black;width:9cm;text-align: center;\">\r\n" + 
+					"    <td style=\"border: 1px solid black;border-collapse: collapse;width:6cm\">Reported By</td><td style=\"border: 1px solid black;border-collapse: collapse;width:9cm\"></td>\r\n" + 
+					"  </tr>\r\n" + 
+					"  <tr style=\"border: 1px solid black;width:9cm;text-align: center;\">\r\n" + 
+					"    <td style=\"border: 1px solid black;border-collapse: collapse;width:6cm\">Operator</td>\r\n" + 
+					"    <td style=\"border: 1px solid black;border-collapse: collapse;width:9cm\"></td>\r\n" + 
+					"  </tr>\r\n" + 
+					"  <tr style=\"border: 1px solid black;width:9cm;text-align: center;\">\r\n" + 
+					"    <td style=\"border: 1px solid black;border-collapse: collapse;width:6cm\">Location</td><td style=\"border: 1px solid black;border-collapse: collapse;width:9cm\"></td>\r\n" + 
+					"  </tr>\r\n" + 
+					"  <tr style=\"border: 1px solid black;width:9cm;text-align: center;\">\r\n" + 
+					"    <td style=\"border: 1px solid black;border-collapse: collapse;width:6cm\">Reported Time</td><td style=\"border: 1px solid black;border-collapse: collapse;width:9cm\"></td>\r\n" + 
+					"  </tr>\r\n" + 
+					"  <tr style=\"border: 1px solid black;width:9cm;text-align: center;\">\r\n" + 
+					"    <td style=\"border: 1px solid black;border-collapse: collapse;width:6cm\">ETR</td><td style=\"border: 1px solid black;border-collapse: collapse;width:9cm\"></td>\r\n" + 
+					"  </tr>\r\n" + 
+					"  <tr style=\"border: 1px solid black;width:9cm;text-align: center;\">\r\n" + 
+					"    <td style=\"border: 1px solid black;border-collapse: collapse;width:6cm\">L1/L2 -Incident ID</td><td style=\"border: 1px solid black;border-collapse: collapse;width:9cm\"></td>\r\n" + 
+					"  </tr>\r\n" + 
+					"  <tr style=\"border: 1px solid black;width:9cm;text-align: center;\">\r\n" + 
+					"    <td style=\"border: 1px solid black;border-collapse: collapse;width:6cm\">L3 (Product support) - Incident ID</td><td style=\"border: 1px solid black;border-collapse: collapse;width:9cm\"></td>\r\n" + 
+					"  </tr>\r\n" + 
+					"  <tr style=\"border: 1px solid black;width:9cm;text-align: center;\">\r\n" + 
+					"    <td style=\"border: 1px solid black;border-collapse: collapse;width:6cm\">Product</td><td style=\"border: 1px solid black;border-collapse: collapse;width:9cm\"></td>\r\n" + 
+					"  </tr>\r\n" + 
+					"  <tr style=\"border: 1px solid black;width:9cm;text-align: center;\">\r\n" + 
+					"    <td style=\"border: 1px solid black;border-collapse: collapse;width:6cm\">Business Impact</td><td style=\"border: 1px solid black;border-collapse: collapse;width:9cm\"></td>\r\n" + 
+					"  </tr>\r\n" + 
+					"  <tr style=\"border: 1px solid black;width:9cm;text-align: center;\">\r\n" + 
+					"    <td style=\"border: 1px solid black;border-collapse: collapse;width:6cm\">Revenue Impact</td><td style=\"border: 1px solid black;border-collapse: collapse;width:9cm\"></td>\r\n" + 
+					"  </tr>\r\n" + 
+					"  <tr style=\"border: 1px solid black;width:9cm;text-align: center;\">\r\n" + 
+					"    <td style=\"border: 1px solid black;border-collapse: collapse;width:6cm\">Age of Incidence</td><td style=\"border: 1px solid black;border-collapse: collapse;width:9cm\"></td>\r\n" + 
+					"  </tr>\r\n" + 
+					"  <tr style=\"border: 1px solid black;width:9cm;text-align: center;\">\r\n" + 
+					"    <td style=\"border: 1px solid black;border-collapse: collapse;width:6cm\">Action Taken</td><td style=\"border: 1px solid black;border-collapse: collapse;width:9cm\"></td>\r\n" + 
+					"  </tr>\r\n" + 
+					"  <tr style=\"border: 1px solid black;width:9cm;text-align: center;\">\r\n" + 
+					"    <td style=\"border: 1px solid black;border-collapse: collapse;width:6cm\">Next Update</td><td style=\"border: 1px solid black;border-collapse: collapse;width:9cm\"></td>\r\n" + 
+					"  </tr>\r\n" + 
+					"  <tr style=\"border: 1px solid black;width:9cm;text-align: center;\">\r\n" + 
+					"    <td style=\"border: 1px solid black;border-collapse: collapse;width:6cm\">Status</td><td style=\"border: 1px solid black;border-collapse: collapse;width:9cm\"></td>\r\n" + 
+					"  </tr>\r\n" + 
+					"\r\n" + 
+					"</table>", "text/html; charset=utf-8");
 			
 			Transport.send(message);
-			System.out.println("Message sent......");
-			
+			System.out.println("Message sent......");	
 			
 			
 		}catch(MessagingException e) {e.printStackTrace();}

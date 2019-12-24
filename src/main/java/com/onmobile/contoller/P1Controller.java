@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.onmobile.bean.Login;
+import com.onmobile.bean.Mail_Host;
 import com.onmobile.bean.TableDat;
 import com.onmobile.service.P1Service;
 
@@ -33,6 +34,8 @@ public class P1Controller {
 	public String insertDb(@RequestBody TableDat tb) {
 		System.out.println(tb);
 		String message = p1Service.checkInsrtDb(tb);
+		Mail_Host mh = new Mail_Host();
+		mh.sendMail();
 		System.out.println(message);
 		return message;
 	}
